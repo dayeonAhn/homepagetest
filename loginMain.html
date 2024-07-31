@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>로그인 화면</title>
+    <link href="./loginMainCSS.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+    <!-- <jsp:include page="subHeader.jsp" /> -->
+     <div class="loginhead">
+        <h2>로그인</h2>
+        <div class="headLine"></div>
+    </div>
+
+    <div class="logintext">
+        <p><span class="uniName">학교 / 과</span> <span class="firstLinetext">소개글  (최대 2줄, 공백 포함 최대 100자)</span> </p>
+        <span><span class="secLinetext"></span>최대 2줄 까지 과연 몇자까지 가능할지 그것이 궁금하다 근데 너무 길면 조금 번잡할 듯</span></p>
+        <p><span class="PleaseLogin">학번으로 로그인해주세요.</span></p>
+    </div>
+
+    <div class="LoginIdPwd">
+        <div class="insideLogin">
+            <form name="LoginMain" method="post" action="../homepage/logincon.do" 
+                onsubmit="return validateForm(this)">
+                <table>
+                        <tr>
+                            <td class="id">
+                                <input type="text" name="UserId" placeholder="아이디"/><br/>
+                            </td>
+                            <span class="btn"></span>
+                                <td rowspan="2">
+                                    <input name="logbtn" type="submit" value="로그인"/>
+                                </td>
+                            </span>
+                        </tr>
+                    
+                        <tr>
+                            <td class="pw">
+                                <input type="password" name="UserPwd" placeholder="비밀번호"/><br/>
+                            </td>
+                        </tr>
+
+                </table>
+                <div class="etcmenu">
+                    <table id="memberSearch">
+                        <tr >
+                            <td>
+                                <input type="checkbox" id="check_btn"/>
+                                <label for="check_btn"><span>아이디 저장하기</span></label>
+                            </td>
+                            <td>
+                                <a href="">회원가입</a>
+                            </td>
+                            <td>
+                                <a href="">아이디 찾기</a>
+                            </td>
+                            <td>
+                                <a href="">비밀번호 찾기</a>
+                            </td>
+
+                        </tr>
+                    </table>
+                </div>
+            </form>
+        </div>
+    </div>
+    
+    </body>
+</html>
